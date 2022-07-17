@@ -1,9 +1,10 @@
 body {
+  background-color: #e5eedf;
 }
 nav {
   display: flex;
   justify-content: space-around;
-  background-color: aquamarine;
+  background-color: #f5ffef;
   padding: 15px;
 }
 nav li {
@@ -12,27 +13,51 @@ nav li {
 nav a {
   text-decoration: none;
   letter-spacing: 2px;
-  color: white;
+  color: rgb(17, 15, 15);
   font-size: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 nav a:hover {
-  transform: scale(1.5);
-  transition: all 1s ease;
+  color: rgb(97, 202, 206);
+  transform: rotate(10deg);
+}
+a {
+  transition: all 0.3s ease-out;
+  display: block;
 }
 
-header {
-  background-color: rgb(27, 23, 23);
+/* header {
+  background-color: #b8ec9a;
   text-align: center;
   color: white;
-}
+} */
 .logo {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 25px;
   letter-spacing: 4px;
-  color: aliceblue;
+  color: rgb(8, 8, 9);
+  text-align: center;
+  background-color: #b8ec9a;
 }
 .current {
   font-weight: bold;
   text-decoration: underline;
+}
+footer {
+  align-items: center;
+  background-color: #b8ec9a;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+}
+#searchField {
+  padding: 6px;
+  border: 2px solid rgb(214, 41, 148);
+  width: 100%;
+}
+#resultslist {
+  font-size: 20px;
+  list-style: none;
+  letter-spacing: 1px;
+  text-align: center;
 }
