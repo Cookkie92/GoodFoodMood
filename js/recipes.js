@@ -6,7 +6,16 @@ const options = {
   },
 };
 
-fetch("https://edamam-recipe-search.p.rapidapi.com/search?q=chicken", options)
-  .then((response) => response.json())
-  .then((response) => console.log(response))
-  .catch((err) => console.error(err));
+function searchRecipe(query) {
+  const url = `https://edamam-recipe-search.p.rapidapi.com/search?q=${query}`;
+  fetch(url, options)
+    .then((response) => response.json())
+
+    .then((response) => {
+      try {
+        const recipes = response;
+        console.log(recipes);
+      } catch (error) {}
+    });
+}
+searchRecipe();
