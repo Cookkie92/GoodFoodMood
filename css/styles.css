@@ -1,0 +1,38 @@
+body {
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: aquamarine;
+  padding: 15px;
+}
+nav li {
+  list-style: none;
+}
+nav a {
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: white;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav a:hover {
+  transform: scale(1.5);
+  transition: all 1s ease;
+}
+
+header {
+  background-color: rgb(27, 23, 23);
+  text-align: center;
+  color: white;
+}
+.logo {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 25px;
+  letter-spacing: 4px;
+  color: aliceblue;
+}
+.current {
+  font-weight: bold;
+  text-decoration: underline;
+}
