@@ -17,7 +17,20 @@ fetch(
       const getRecipes = jsonData;
       console.log(getRecipes)
       recipeResult.innerHTML = "";
-      recipeResult.innerText = getRecipes.recipes[0].title
+      recipeResult.innerText = getRecipes
+
+      function appendData(getRecipes) {
+        var mainContainer = document.getElementById("recipeResult");
+        for (var i = 0; i < getRecipes.length; i++) {
+
+          console.log(i)
+          var div = document.createElement("div");
+          div.innerHTML = 'Name: ' + getRecipe[i].title + ' ' + getRecipe[i].id;
+          mainContainer.appendChild(div);
+        }
+      }
+      appendData()
+      console.log(i)
       
     } catch (error) {
       console.log(error);
