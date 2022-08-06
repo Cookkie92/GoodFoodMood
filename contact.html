@@ -27,8 +27,53 @@
     </nav>
     <main>
       <a href="details.html"><ul id="resultslist"></a>
+        <div id="sucess"><h3>Sucess</h3></div>
+      <form id="contactForm">
+        <div>
+          <input
+            class="contact-inputs"
+            name="firstname"
+            id="name"
+            placeholder="Name"
+          />
+          <div class="error-form" id="nameError">Required</div>
+        </div>
+        <div>
+          <input
+            class="contact-inputs"
+            name="subject"
+            id="subject"
+            placeholder="Subject"
+          />
+          <div class="error-form" id="subjectError">
+            Must have atlest 10 characters.
+          </div>
+        </div>
+        <div>
+          <input
+            class="contact-inputs"
+            name="email"
+            id="email"
+            placeholder="Email"
+          />
+          <div class="error-form" id="emailError">Enter Valid Email</div>
+        </div>
+        <div>
+          <input
+            class="contact-inputs"
+            name="adress"
+            id="adress"
+            placeholder="Adress"
+          />
+          <div class="error-form" id="adressError">25 Characters Required</div>
+        </div>
+        <div class="btn-container">
+          <button class="start-btn">Submit</button>
+        </div>
+      </form>
     </main>
     <footer><p>Copyright &copy; 2021 Kristian K</p></footer>
-    <script src="/js/test.js"></script>
+    <script src="js/contact.js"></script>
+    
   </body>
 </html>
