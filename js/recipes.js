@@ -7,7 +7,7 @@ const options = {
 };
 const recipeResult = document.getElementById("recipeResult")
 fetch(
-  "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?tags=veryHealthy%2Cdessert&number=50",
+  "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?tags=veryHealthy%2Cdinner&number=50",
   options
 )
   .then((response) => response.json())
@@ -17,16 +17,15 @@ fetch(
       const getRecipes = jsonData;
       console.log(getRecipes)
       recipeResult.innerHTML = "";
-      getRecipes.forEach((title) => {
-        
-    
+      for (let i = 0; i < getRecipes.recipes.length; i++) {
+        console.log(i)
         recipeResult.innerHTML += `
-      ${getRecipes.recipes.title}
+
+        <div class="recipe-results">
+        ${getRecipes.recipes[i].title}
+        </div>
         `
-        
-    
-        console.log(result);
-      });
+      }
 
       
       
