@@ -5,7 +5,7 @@ const options = {
     "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
   },
 };
-const recipeResult = document.getElementById("recipeResult")
+const recipeResult = document.getElementById("recipeResult");
 fetch(
   "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?tags=veryHealthy%2Cdinner&number=50",
   options
@@ -15,10 +15,10 @@ fetch(
   .then((jsonData) => {
     try {
       const getRecipes = jsonData;
-      console.log(getRecipes)
+      console.log(getRecipes);
       recipeResult.innerHTML = "";
       for (let i = 0; i < getRecipes.recipes.length; i++) {
-        console.log(i)
+        console.log(i);
         recipeResult.innerHTML += `
 
         <div class="recipe-results">
@@ -33,11 +33,8 @@ fetch(
            </a>
         
         </div>
-        `
+        `;
       }
-
-      
-      
     } catch (error) {
       console.log(error);
     }
