@@ -15,7 +15,9 @@ function searchRecipe(query) {
 
     .then((jsonData) => {
       try {
+        //results finner bare frem title.
         const results = jsonData.results.map((element) => element.title);
+        //legger renderresult funksjon inni denne
         renderResults(results);
         console.log(results);
       } catch (error) {
@@ -27,9 +29,9 @@ searchRecipe();
 
 function renderResults(results) {
   const list = document.getElementById("resultslist");
-  list.innerHTML = "";
+  // list.innerHTML = "";
   results.forEach((result) => {
-    const element = document.createElement("a");
+    const element = document.createElement("div");
     element.innerText = result;
 
     list.appendChild(element);
@@ -42,6 +44,12 @@ function renderResults(results) {
     //   </a>
     // </div>
     // `;
+
+    //displaye bilde av recipe vesiden av navn
+    //lage recipes clickable i search
+    //Link til details.html
+    //få recipes som  kommer frem i search til å legge seg over andre ting og ikke ta hele siden vekk.
+    //fikse error om at options allerede er declared.
 
     console.log(result);
   });
