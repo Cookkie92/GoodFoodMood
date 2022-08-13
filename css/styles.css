@@ -50,6 +50,12 @@ nav a:hover {
   background-size: 100% auto;
   height: 200px;
 }
+.recipe-banner {
+  background: url("/images/plate-with-keto-diet-food-cherry-tomatoes-chicken-breast-eggs-carrot-salad-with-arugula-spinach-keto-lunch-top-view.jpg")
+    center;
+  background-size: 100% auto;
+  height: 200px;
+}
 .current {
   font-weight: bold;
 }
