@@ -19,15 +19,18 @@ fetch(
       console.log(getRecipes);
       recipeResult.innerHTML = "";
       for (let i = 0; i < getRecipes.recipes.length; i++) {
+        if (getRecipes.recipes[i].image === 0) {
+          image.style.display = "none";
+        }
         console.log(i);
         recipeResult.innerHTML += `
 
         <div class="recipe-results">
-        <a href="details.html?id=${getRecipes.recipes[i].id}">
+        <a href="details.html?id=${getRecipes.recipes[i].id} ">
+        
         <div class = "inner-result">
-        <h3 class="logo">${getRecipes.recipes[i].title}</h3>
-          <img class="image" src="${getRecipes.recipes[i].image}"  alt="thumbnail">
-
+        <img class="image" src="${getRecipes.recipes[i].image}"  alt="thumbnail">      
+        <h3 class="recipe-logo">${getRecipes.recipes[i].title}</h3>
            </div>
            </a>
 
