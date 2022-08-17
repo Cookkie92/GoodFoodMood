@@ -27,51 +27,58 @@
       </li> -->
     </nav>
     <main>
-      <!-- <a href="details.html"><ul id="resultslist"></a> -->
-      <div id="sucess"><h3>Sucess</h3></div>
-      <form id="contactForm">
-        <div>
-          <input
-            class="contact-inputs"
-            name="firstname"
-            id="name"
-            placeholder="Name"
-          />
-          <div class="error-form" id="nameError">Required</div>
-        </div>
-        <div>
-          <input
-            class="contact-inputs"
-            name="subject"
-            id="subject"
-            placeholder="Subject"
-          />
-          <div class="error-form" id="subjectError">
-            Must have atlest 10 characters.
+      <h1 class="headline-text">Contact us</h1>
+      <div id="sucess" class="headline-text">Sendt</div>
+      <section class="contact-container">
+        <form id="contactForm">
+          <div>
+            <input
+              class="contact-inputs"
+              name="firstname"
+              id="name"
+              placeholder="Name"
+            />
+            <div class="error-form" id="nameError">Required</div>
+          </div>
+          <div>
+            <input
+              class="contact-inputs"
+              name="email"
+              id="email"
+              placeholder="Email"
+            />
+            <div class="error-form" id="emailError">Enter Valid Email</div>
+          </div>
+          <div>
+            <input
+              class="contact-subject"
+              name="subject"
+              id="subject"
+              placeholder="Subject"
+            />
+            <div class="error-form" id="subjectError">
+              Must have atlest 10 characters.
+            </div>
+          </div>
+          <div class="btn-container">
+            <button class="start-btn">Send</button>
+          </div>
+        </form>
+        <div class="contact-bottom">
+          <h3>Location</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i>Haugesund, Norway | leet street
+            1337
+          </p>
+          <div>
+            <div>
+              <h3>Contact Us</h3>
+              <p><i class="fas fa-phone-volume"></i>+47420691337</p>
+              <p>Or contact us with the form above.</p>
+            </div>
           </div>
         </div>
-        <div>
-          <input
-            class="contact-inputs"
-            name="email"
-            id="email"
-            placeholder="Email"
-          />
-          <div class="error-form" id="emailError">Enter Valid Email</div>
-        </div>
-        <div>
-          <input
-            class="contact-inputs"
-            name="adress"
-            id="adress"
-            placeholder="Adress"
-          />
-          <div class="error-form" id="adressError">25 Characters Required</div>
-        </div>
-        <div class="btn-container">
-          <button class="start-btn">Submit</button>
-        </div>
-      </form>
+      </section>
     </main>
     <footer><p>Copyright &copy; 2021 Kristian K</p></footer>
     <script src="js/contact.js"></script>

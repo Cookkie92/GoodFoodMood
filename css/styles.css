@@ -164,3 +164,49 @@ footer {
   left: 50px; */
   font-weight: bold;
 }
+/*Search*/
+h4 {
+  color: white;
+}
+/*contact form*/
+.contact-bottom h3,
+p {
+  padding: 5px;
+}
+.error-form {
+  display: none;
+  color: red;
+  font-size: 12px;
+  padding: 5px;
+  letter-spacing: 2px;
+}
+.contact-container {
+  max-width: 550px;
+  align-items: center;
+  margin: 0 auto;
+  padding: 100px;
+  border-radius: 20px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+#contactForm {
+  display: grid;
+  grid-row-gap: 15px;
+  text-align: center;
+  padding: 10px;
+}
+.contact-inputs {
+  padding: 20px;
+  width: 300px;
+  border-radius: 5px;
+}
+.contact-subject {
+  padding: 20px;
+  width: 300px;
+  height: 100px;
+  border-radius: 5px;
+}
+#sucess {
+  display: none;
+  color: green;
+}
