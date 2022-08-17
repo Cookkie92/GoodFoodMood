@@ -6,7 +6,8 @@ const options = {
   },
 };
 function searchRecipe() {
-  let url = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?query=pasta&`;
+  let url = createUrl();
+  console.log(url);
   fetch(url, options)
     .then((response) => response.json())
 
@@ -21,7 +22,7 @@ function searchRecipe() {
 searchRecipe();
 
 function createUrl() {
-  const baseUrl = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?`;
+  const baseUrl = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?number=50&addRecipeInformation=true&instructionsRequired=true&`;
   let url = baseUrl;
   let recipeInput = document.getElementsByClassName("recipe-input");
   let recipeInputArray = [...recipeInput];
@@ -33,9 +34,9 @@ function createUrl() {
     //   return;
     // } (stopp brukeren for å sende inn hvis det ikke er noe i query)
 
-    if (headers.value === null || headers.value === "") {
-      return;
-    }
+    // if (headers.value === null || headers.value === "") {
+    //   return;
+    // }
 
     urlHeaders = urlHeaders + headers.name + "=" + headers.value + "&";
   });
