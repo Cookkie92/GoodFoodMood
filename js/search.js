@@ -71,7 +71,7 @@ function createUrl() {
 }
 createUrl();
 
-// searchingForm.addEventListener("submit", searchRecipe());
+searchingForm.addEventListener("submit", searchRecipe());
 
 // let searchTimeoutToken = 0;
 // window.onload = () => {
