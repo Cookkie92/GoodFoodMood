@@ -7,8 +7,8 @@
 //   },
 // };
 
-// function searchRecipe(query) {
-//   const url = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?query=${query}&offset=0&number=50&addRecipeInformation=true&instructionsRequired=true`;
+// function searchRecipe(query, blepp) {
+//   const url = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?query=${query}&offset=0&number=${query}&addRecipeInformation=true&instructionsRequired=true`;
 
 //   fetch(url, options)
 //     .then((response) => response.json())

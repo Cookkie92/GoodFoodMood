@@ -26,16 +26,34 @@
     <main>
       <div class="highlights">
         <div class="inner-highlights"><h1>Search recipes</h1></div>
-        <form>
-          <input type="text" id="searchField" placeholder="Search Recipes" />
-          <input type="text" id="searchField" placeholder="Search Recipes" />
-          <input type="text" id="searchField" placeholder="Search Recipes" />
-          <button>Press</button>
+        <form id="searchForm">
+          <input
+            type="text"
+            class="recipe-input"
+            id="searchQuery"
+            name="query"
+            placeholder="Search Recipes"
+          />
+          <input
+            type="text"
+            class="recipe-input"
+            id="searchIngrediants"
+            name="includeIngredients"
+            placeholder="Input Ingrediants"
+          />
+          <input
+            type="text"
+            class="recipe-input"
+            id="searchIntolerance"
+            name=""
+            placeholder="Input Intolerance"
+          />
+          <button>Submit</button>
         </form>
       </div>
       <ul id="resultslist"></ul>
     </main>
     <footer><p>Copyright &copy; 2021 Kristian K</p></footer>
-    <script src="/js/test.js"></script>
+    <script src="/js/search.js"></script>
   </body>
 </html>
