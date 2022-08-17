@@ -1,5 +1,5 @@
 const resultsList = document.getElementById("#resultslist");
-const searchingForm = document.getElementById("#searchForm");
+const searchingForm = document.querySelector("#searchForm");
 const options = {
   method: "GET",
   headers: {
@@ -15,34 +15,41 @@ function searchRecipe() {
 
     .then((jsonData) => {
       try {
-        const results = jsonData.results.map((element) => element.title);
+        let results = jsonData.results;
         renderResults(results);
-        createUrl();
+
         console.log(jsonData);
       } catch (error) {
         console.log(error);
       }
     });
 }
-searchRecipe();
+// searchRecipe();
 
 function renderResults(results) {
-  const list = document.getElementById("resultslist");
-  // list.innerHTML = "";
-  results.forEach((result) => {
-    const element = document.createElement("li");
-    element.innerText = result;
+  const recipeResult = document.getElementById("resultslist");
+  // const getRecipes = jsonData;
+  // console.log(getRecipes);
+  recipeResult.innerHTML = "";
+  for (let i = 0; i < results.length; i++) {
+    if (typeof results[i].image === "undefined") {
+      continue;
+    }
+    console.log(i);
+    recipeResult.innerHTML += `
 
-    list.appendChild(element);
+        <div class="recipe-results">
+        <a href="details.html?id=${results[i].id} ">
 
-    //displaye bilde av recipe vesiden av navn
-    //lage recipes clickable i search
-    //Link til details.html
-    //få recipes som  kommer frem i search til å legge seg over andre ting og ikke ta hele siden vekk.
-    //fikse error om at options allerede er declared.
+        <div class = "inner-result">
+        <img class="image" src="${results[i].image}"  alt="thumbnail">
+        <h3 class="recipe-logo">${results[i].title}</h3>
+           </div>
+           </a>
 
-    console.log(result);
-  });
+        </div>
+        `;
+  }
 }
 
 function createUrl() {
@@ -71,7 +78,9 @@ function createUrl() {
 }
 createUrl();
 
-searchingForm.addEventListener("submit", searchRecipe());
+//results[0].analyzedInstructions[0].steps[0].ingredients
+// event.preventDefault();
+// searchingForm.addEventListener("submit", searchRecipe());
 
 // let searchTimeoutToken = 0;
 // window.onload = () => {
@@ -88,21 +97,6 @@ searchingForm.addEventListener("submit", searchRecipe());
 //     }, 250);
 //   };
 // };
-
-// window.onload = () => {
-//     const searchFieldElement = document.getElementById("searchField");
-//     searchFieldElement.onkeyup = (event) => {
-//       clearTimeout(searchTimeoutToken);
-
-//       if (searchFieldElement.value.trim().length === 0) {
-//         return;
-//       }
-
-//       searchTimeoutToken = setTimeout(() => {
-//         searchRecipe(searchFieldElement.value);
-//       }, 250);
-//     };
-//   };
 
 //Query = main
 //diet = vegetarian etc
