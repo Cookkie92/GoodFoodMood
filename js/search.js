@@ -1,3 +1,5 @@
+const resultsList = document.getElementById("#resultslist");
+const searchingForm = document.getElementById("#searchForm");
 const options = {
   method: "GET",
   headers: {
@@ -13,6 +15,9 @@ function searchRecipe() {
 
     .then((jsonData) => {
       try {
+        const results = jsonData.results.map((element) => element.title);
+        renderResults(results);
+        createUrl();
         console.log(jsonData);
       } catch (error) {
         console.log(error);
@@ -20,6 +25,25 @@ function searchRecipe() {
     });
 }
 searchRecipe();
+
+function renderResults(results) {
+  const list = document.getElementById("resultslist");
+  // list.innerHTML = "";
+  results.forEach((result) => {
+    const element = document.createElement("li");
+    element.innerText = result;
+
+    list.appendChild(element);
+
+    //displaye bilde av recipe vesiden av navn
+    //lage recipes clickable i search
+    //Link til details.html
+    //få recipes som  kommer frem i search til å legge seg over andre ting og ikke ta hele siden vekk.
+    //fikse error om at options allerede er declared.
+
+    console.log(result);
+  });
+}
 
 function createUrl() {
   const baseUrl = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?number=50&addRecipeInformation=true&instructionsRequired=true&`;
@@ -30,13 +54,13 @@ function createUrl() {
 
   recipeInputArray.forEach((headers) => {
     // headers.name;
-    // if (headers.name === "query" && headers.value === null) {
-    //   return;
-    // } (stopp brukeren for å sende inn hvis det ikke er noe i query)
+    if (headers.name === "query" && headers.value === null) {
+      return;
+    }
 
-    // if (headers.value === null || headers.value === "") {
-    //   return;
-    // }
+    if (headers.value === null || headers.value === "") {
+      return;
+    }
 
     urlHeaders = urlHeaders + headers.name + "=" + headers.value + "&";
   });
@@ -47,8 +71,23 @@ function createUrl() {
 }
 createUrl();
 
-// const searchingForm = document.getElementById("#searchForm");
-// searchingForm.addEventListener("submit", createUrl);
+// searchingForm.addEventListener("submit", searchRecipe());
+
+// let searchTimeoutToken = 0;
+// window.onload = () => {
+//   const searchFieldElement = document.getElementById("#searchForm");
+//   searchFieldElement.onsubmit = (event) => {
+//     clearTimeout(searchTimeoutToken);
+
+//     if (searchFieldElement.value.trim().length === 0) {
+//       return;
+//     }
+
+//     searchTimeoutToken = setTimeout(() => {
+//       searchRecipe(searchFieldElement.value);
+//     }, 250);
+//   };
+// };
 
 // window.onload = () => {
 //     const searchFieldElement = document.getElementById("searchField");
