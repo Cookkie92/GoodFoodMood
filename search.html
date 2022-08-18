@@ -17,23 +17,61 @@
       </div>
     </header>
     <nav>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="recipes.html">Recipes</a></li>
-      <li><a class="current" href="search.html">Search</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <div class="menu-wrap">
+        <input type="checkbox" class="toggler" />
+        <div class="hamburger"><div></div></div>
+        <div class="menu">
+          <div>
+            <div>
+              <ul>
+                <li>
+                  <a href="index.html"><i class="fas fa-home"></i>Home</a>
+                </li>
+                <li>
+                  <a href="recipes.html"
+                    ><i class="fab fa-wpexplorer"></i>Recipes</a
+                  >
+                </li>
+                <li>
+                  <a href="search.html"
+                    ><i class="far fa-calendar-check"></i>Search</a
+                  >
+                </li>
+                <li>
+                  <a href="about.html"
+                    ><i class="fas fa-map-marker-alt"></i>About Us</a
+                  >
+                </li>
+                <li>
+                  <a href="contact.html"
+                    ><i class="fas fa-file-signature"></i>Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a class="current" href="search.html">Search</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </div>
     </nav>
     <main>
       <div class="contact-container">
         <div class="inner-highlights"><h1>Search recipes</h1></div>
-
+        <h4>Search Anything</h4>
         <input
           type="text"
           class="recipe-input"
           id="searchQuery"
           name="query"
-          placeholder="Search Recipes"
+          placeholder="Search any Food"
         />
+
         <input
           type="text"
           class="recipe-input"
@@ -41,6 +79,7 @@
           name="includeIngredients"
           placeholder="Input Ingrediants"
         />
+
         <input
           type="text"
           class="recipe-input"
@@ -48,27 +87,24 @@
           name="intolerances"
           placeholder="Input Intolerance"
         />
-        <h4>Max Carbs</h4>
+
         <input
-          value="100"
           type="number"
           class="recipe-input"
           id="searchMaxCarbs"
           name="maxCarbs"
           placeholder="Input Max Carbs"
         />
-        <h4>Max Calories</h4>
+
         <input
-          value="200"
           type="number"
           class="recipe-input"
           id="searchCalories"
           name="MaxCalories"
           placeholder="Input Max Calories"
         />
-        <h4>Max Proteins</h4>
+
         <input
-          value="100"
           type="number"
           class="recipe-input"
           id="searchProteins"
