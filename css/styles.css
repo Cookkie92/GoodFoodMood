@@ -210,3 +210,8 @@ p {
   display: none;
   color: green;
 }
+/*details*/
+
+.recipe-details {
+  color: white;
+}
