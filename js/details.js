@@ -36,10 +36,13 @@ fetch(
       <div class="recipe-details>
       <div class="inner-details">
             <h1>${recipes.title}</h1>
-            ${recipes.summary}
-            <img class="details-image" src="${recipes.image}" alt="very nice food"
-            Diets:<p>${recipes.diets}</p>
-            ${ingred}
+            <p>${recipes.summary}</p>
+            <img class="details-image" src="${recipes.image}" alt="very nice food">
+            <h2>Diets</h2>
+            <p>${recipes.diets}</p>
+            <h2>Ingrediants</h2>
+            <p>${ingred}</p>
+            <h2>Instructions</h2>
             <p>${recipes.instructions}</p>
 
         </div>
