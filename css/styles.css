@@ -10,6 +10,13 @@ body {
 .inner-highlights {
   text-align: center;
 }
+.index-body {
+  background-image: url("/images/vegetables-set-left-black-slate.jpg");
+  background-size: 100%;
+}
+/* .search-image-background {
+  background-image: url("/images/table-top-with-background.jpg");
+} */
 /* Navigation main */
 
 .nav-links {
@@ -92,6 +99,9 @@ footer {
   color: #fff;
   display: flex;
   justify-content: space-around;
+  /* position: fixed;
+  bottom: 0;
+  width: 100%; */
 }
 
 /*recipe card*/
@@ -139,6 +149,18 @@ footer {
 /*Search*/
 h4 {
   color: white;
+}
+.search-container {
+  max-width: 550px;
+  align-items: center;
+  margin: 0 auto;
+  padding: 100px;
+  border-radius: 20px;
+  text-align: center;
+  letter-spacing: 3px;
+  background-image: url("/images/table-top-with-background.jpg");
+  background-size: 100%;
+  margin-top: 20px;
 }
 .recipe-input {
   padding: 20px;
@@ -423,13 +445,19 @@ p {
   }
   .banner-logo {
     font-size: 20px;
+    position: relative;
+    top: 80px;
+    float: left;
   }
   .contact-container {
     padding: 20px;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
+  .recipe-banner {
+    height: 150px;
+  }
   .menu-wrap {
     top: 100px;
     left: 40%;

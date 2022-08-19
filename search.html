@@ -61,60 +61,62 @@
       </div>
     </nav>
     <main>
-      <div class="contact-container">
-        <div class="inner-highlights">
-          <h1 class="headline-text">Search recipes</h1>
-        </div>
-        <h4>Search Anything</h4>
-        <input
-          type="text"
-          class="recipe-input"
-          id="searchQuery"
-          name="query"
-          placeholder="Search any Food"
-        />
+      <div class="search-image-background">
+        <div class="search-container">
+          <div class="inner-highlights">
+            <h1 class="headline-text">Search recipes</h1>
+          </div>
+          <h4>Search Any food, Use comma between ingrediants</h4>
+          <input
+            type="text"
+            class="recipe-input"
+            id="searchQuery"
+            name="query"
+            placeholder="Search any Food"
+          />
 
-        <input
-          type="text"
-          class="recipe-input"
-          id="searchIngrediants"
-          name="includeIngredients"
-          placeholder="Input Ingrediants"
-        />
+          <input
+            type="text"
+            class="recipe-input"
+            id="searchIngrediants"
+            name="includeIngredients"
+            placeholder="Input Ingrediants"
+          />
 
-        <input
-          type="text"
-          class="recipe-input"
-          id="searchIntolerance"
-          name="intolerances"
-          placeholder="Input Intolerance"
-        />
+          <input
+            type="text"
+            class="recipe-input"
+            id="searchIntolerance"
+            name="intolerances"
+            placeholder="Input Intolerance"
+          />
 
-        <input
-          type="number"
-          class="recipe-input"
-          id="searchMaxCarbs"
-          name="maxCarbs"
-          placeholder="Input Max Carbs"
-        />
+          <input
+            type="number"
+            class="recipe-input"
+            id="searchMaxCarbs"
+            name="maxCarbs"
+            placeholder="Input Max Carbs"
+          />
 
-        <input
-          type="number"
-          class="recipe-input"
-          id="searchCalories"
-          name="MaxCalories"
-          placeholder="Input Max Calories"
-        />
+          <input
+            type="number"
+            class="recipe-input"
+            id="searchCalories"
+            name="MaxCalories"
+            placeholder="Input Max Calories"
+          />
 
-        <input
-          type="number"
-          class="recipe-input"
-          id="searchProteins"
-          name="MaxProteins"
-          placeholder="Input Max Proteins"
-        />
-        <div class="btn-container">
-          <button class="start-btn" onclick="searchRecipe()">Submit</button>
+          <input
+            type="number"
+            class="recipe-input"
+            id="searchProteins"
+            name="MaxProteins"
+            placeholder="Input Max Proteins"
+          />
+          <div class="btn-container">
+            <button class="start-btn" onclick="searchRecipe()">Submit</button>
+          </div>
         </div>
       </div>
       <ul id="resultslist"></ul>
