@@ -486,7 +486,7 @@ p {
     height: 150px;
   }
   .menu-wrap {
-    top: 100px;
-    left: 40%;
+    top: 15%;
+    left: 50%;
   }
 }
