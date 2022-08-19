@@ -4,19 +4,11 @@ body {
 :root {
   --menu-speed: 0.75s;
 }
-/* .headline-text {
-  text-align: center;
-} */
+
 .inner-highlights {
   text-align: center;
 }
-.index-body {
-  background-image: url("/images/vegetables-set-left-black-slate.jpg");
-  background-size: 100%;
-}
-/* .search-image-background {
-  background-image: url("/images/table-top-with-background.jpg");
-} */
+
 /* Navigation main */
 
 .nav-links {
@@ -51,6 +43,10 @@ nav a:hover {
 }
 
 /*Logo and banners*/
+.index-body {
+  background-image: url("/images/vegetables-set-left-black-slate.jpg");
+  background-size: 100%;
+}
 .banner-logo {
   color: black;
   position: absolute;
@@ -88,7 +84,10 @@ nav a:hover {
 text color
 */
 h1,
-p {
+p,
+h2,
+h3,
+h4 {
   color: rgb(241, 246, 242);
 }
 
@@ -99,11 +98,8 @@ footer {
   color: #fff;
   display: flex;
   justify-content: space-around;
-  /* position: fixed;
-  bottom: 0;
-  width: 100%; */
 }
-
+/*Details page*/
 /*recipe card*/
 .recipe-results {
   margin: 0 auto;
@@ -117,20 +113,17 @@ footer {
 }
 
 .inner-result:hover {
-  /* background-color: rgb(239, 235, 248); */
   transform: scale(1.03);
   transition: all 0.5s ease;
 }
 .inner-result {
-  /* background-color: rgb(240, 240, 244); */
   max-width: 800px;
   width: 450px;
   height: 300px;
-  /* margin: 3%;
-  position: relative; */
+
   text-decoration: none;
   display: inline-block;
-  /* color: rgb(206, 206, 231); */
+
   font-size: 1.05rem;
 }
 .image {
@@ -146,10 +139,32 @@ footer {
   text-align: center;
   font-weight: bold;
 }
-/*Search*/
-h4 {
+/*details*/
+
+.recipe-details {
   color: white;
+  text-align: center;
+  display: flex;
+  margin: 0 auto;
 }
+.inner-details {
+}
+.details-image {
+}
+
+/*featured grid*/
+.featured-result {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+/*Search*/
+
 .search-container {
   max-width: 550px;
   align-items: center;
@@ -210,7 +225,9 @@ p {
   border-radius: 20px;
   text-align: center;
   letter-spacing: 3px;
-  background-color: rgb(83, 85, 83);
+  background-image: url("/images/table-top-with-background.jpg");
+  background-size: 100%;
+  /* background-color: rgb(83, 85, 83); */
   margin-top: 20px;
 }
 #contactForm {
@@ -233,11 +250,6 @@ p {
 #sucess {
   display: none;
   color: green;
-}
-/*details*/
-
-.recipe-details {
-  color: white;
 }
 
 /*mobile/tablets*/
