@@ -1,5 +1,5 @@
 body {
-  background-color: #0b0c0b;
+  background: linear-gradient(#685f5f, #000000, #070708);
 }
 :root {
   --menu-speed: 0.75s;
